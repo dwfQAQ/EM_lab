@@ -1,5 +1,5 @@
-%----Analytical Inductance Trend----%
-Inductence = figure();
+%----Analytical Inductance Trend----% 
+Inductence = figure(); %need to load xn_inductance.mat  and ln_inductance.mat
 %----Without Air-gap Fringging----%
 L1 = (1E4)./(1.432*(1E6)-1.99*(1E6).*x1);
 anf = plot(-x1,L1);
@@ -10,7 +10,7 @@ xlabel('Air-gap [mm]');
 ylabel('Half-side Inductance [H]');
 hold on;
 %----With Air-gap Fringing----%
-R2 = 4.37*(1E5)+1.99*(1E3).*x2+(3.98*(1E8).*(1-2.*x2))./((20-2.*x2).*(20-2.*x2));
+R2 = 1.34*(1E6)+1.99*(1E3).*x2-(7.96.*(1E8).*x2)./((20-2.*x2).*(20-2.*x2));
 L2 = (1E4)./R2;
 af = plot(-x2,L2);
 % modify the line styles

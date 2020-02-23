@@ -22,10 +22,10 @@ fh2 = figure();
 Eelec2 = ones(6,1);
 m = 1;
 for x = [-5 -2 -1 -0.5 -0.3 -0.1] 
-   R = 4.37*(1E5)+1.99*(1E3).*x+(3.98*(1E8).*(1-2.*x))./((20-2.*x).*(20-2.*x));
+   R = 1.34*(1E6)+1.99*(1E3).*x-(7.96.*(1E8).*x)./((20-2.*x).*(20-2.*x));
    L = (1E4)./R;
    i = 0:1:10;   
-   psi2 = L*i; 
+   psi2 = L.*i; 
    plot(i, psi2,'--o'); 
    Eelec2(m) = trapz(psi2,i);
    hold on;
@@ -69,8 +69,8 @@ Eelec4 = ones(6,1);
 i = 1:1:11;
 psi400 = plot(CP_00(i,1),CP_00(i,3),'--o');
 hold on;
-Eelec4(1) = trapz(CP_00(i,3),CP_00(i,1));
-psi4003 = plot(CP_003(i,1),CP_003(i,3),'--o'); %not accurate enough
+Eelec4(1) = trapz(CP_00(i,3),CP_00(i,1)); %not accurate enough,Eelec41 is  the accurate one
+psi4003 = plot(CP_003(i,1),CP_003(i,3),'--o'); 
 hold on;
 Eelec4(2) = trapz(CP_003(i,3),CP_003(i,1));
 psi4005 = plot(CP_005(i,1),CP_005(i,3),'--o');
