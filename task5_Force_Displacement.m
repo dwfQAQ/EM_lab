@@ -3,6 +3,7 @@ Forcen = figure();
 %----Without Air-gap Fringging----%
 Force1 = ones(5,1);
 x = [0 -3 -4 -4.5 -4.7];  %x:displacement, air-gap = [5 2 1 0.5 0.3 0.1]
+
 Force1(1) = (Eelec1(2)-Eelec1(1))./(3*(10^(-3)));
 Force1(2) = (Eelec1(3)-Eelec1(2))./(1*(10^(-3)));
 Force1(3) = (Eelec1(4)-Eelec1(3))./(0.5*(10^(-3)));
@@ -13,6 +14,7 @@ hold on;
 
 %----With Air-gap Fringging----%
 Force2 = ones(5,1);
+
 x = [0 -3 -4 -4.5 -4.7];  %x:displacement, air-gap = [5 2 1 0.5 0.3]
 Force2(1) = (Eelec2(2)-Eelec2(1))./(3*(10^(-3)));
 Force2(2) = (Eelec2(3)-Eelec2(2))./(1*(10^(-3)));
@@ -24,6 +26,7 @@ hold on;
 
 %----Core Linear----%
 Force3 = ones(5,1);
+
 x = [0 -3 -4 -4.5 -4.7];  %x:displacement, air-gap = [5 2 1 0.5 0.3]
 Force3(1) = (Eelec31(5)-Eelec31(6))./(3*(10^(-3)));
 Force3(2) = (Eelec31(4)-Eelec31(5))./(1*(10^(-3)));
@@ -35,6 +38,7 @@ hold on;
 
 %----Core NonLinear----%
 Force4 = ones(5,1);
+
 x = [0 -3 -4 -4.5 -4.7];  %x:displacement, air-gap = [5 2 1 0.5 0.3]
 Force4(1) = (Eelec41(5)-Eelec41(6))./(3*(10^(-3)));
 Force4(2) = (Eelec41(4)-Eelec41(5))./(1*(10^(-3)));
